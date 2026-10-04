@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Quiz App</title>
+    <!-- Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 font-sans leading-normal tracking-normal">
+    <div id="quiz-container" class="container mx-auto px-4 py-8">
+        <!-- Progress Bar -->
+        <div class="progress-bar bg-blue-500 rounded-full w-64 h-2 mb-4">
+            <span class="bg-white text-gray-700 text-sm font-bold">0/4</span>
+        </div>
+
+        <!-- Quiz Questions and Answers -->
+        <div id="question-container" class="mb-8">
+            <h1 class="text-center text-xl font-semibold mb-2">Question 1:</h1>
+            <p class="text-center text-gray-700">What is the capital of France?</p>
+            <button type="button" class="btn btn-primary mx-auto my-4 w-full">Paris</button>
+            <button type="button" class="btn btn-secondary mx-auto my-4 w-full">London</button>
+            <button type="button" class="btn btn-secondary mx-auto my-4 w-full">Berlin</button>
+            <button type="button" class="btn btn-secondary mx-auto my-4 w-full">Madrid</button>
+        </div>
+
+        <!-- Score Card -->
+        <div id="score-card" class="text-center">
+            <p>Final Score: 0/4</p>
+            <button onclick="restartQuiz()" class="btn btn-primary mt-4">Restart Quiz</button>
+        </div>
+    </div>
+
+    <!-- Script to handle quiz logic -->
+    <script src="quiz.js"></script>
+</body>
+</html>
